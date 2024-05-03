@@ -1,0 +1,31 @@
+// Declare objects - literals and constructors
+// singleton, if declared via constructor
+
+//Object.create - > singleton
+
+const mysym = Symbol('key1')
+
+const Jsuser = {
+    name: 'hitesh',//by default name (or any key) is considered as string
+    age: 23,
+    [mysym]: 'mykey1',// used in square brackets if use as symbol
+    location: 'jaipur',
+    'email': 'mohit@google.com',
+    isLoggedIn: false,
+    lastDays: ["Monday", "Saturday"]
+}
+
+// Object.freeze(Jsuser) //freejing user, not abe to change the value
+
+
+Jsuser.greeting = function(){
+    console.log("hello user")
+}
+
+
+// console.log(Jsuser.name)
+// console.log(Jsuser['name'])
+// console.log(Jsuser['email'])//email can be accessed in square bracket only
+Jsuser.greeting()
+// console.log()
+
